@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .main-menu, .footer-menu {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        a.active {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .footer-menu {
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Menu App</h1>
+    </header>
+
+    <nav class="main-menu">
+        <h2>Main Menu</h2>
+        {% load menu_tags %}
+        {% draw_menu 'main_menu' %}
+    </nav>
+
+    <footer class="footer-menu">
+        <h2>Footer Menu</h2>
+        {% draw_menu 'footer_menu' %}
+    </footer>
+</body>
+</html>
