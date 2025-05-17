@@ -20,6 +20,6 @@ from django.views.generic import TemplateView
 from menu_app.views import MenuView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    re_path(r'^(?P<path>.*)/?$', MenuView.as_view(), name='menu_page'),
+    path("admin/", admin.site.urls),
+    re_path(r"^(?P<path>.*)/?$", MenuView.as_view(), name="menu_page"),
 ]
