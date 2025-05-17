@@ -55,7 +55,7 @@ ROOT_URLCONF = 'menu_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['menu_app.templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
